@@ -15,6 +15,8 @@ public class Main {
         }
         StorageDeviceLister.deviceList(UserInput);
         FilePathAdd.filePath(UserInput);
+        BlockSize.blockSize(UserInput);
+        OflagHandler.handleOflag(UserInput);
         
 
         
