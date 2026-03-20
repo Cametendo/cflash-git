@@ -7,7 +7,7 @@ Small and lightweight image and iso flasher build on `dd`.
 [![Status](https://img.shields.io/badge/Status-Beta-red.svg)](https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta)
 
 # About
-Java program using `dd` to make flashing iso and image files easier on the terminal. This program allows anyone to flash iso and image files without having to search for extra GUI tools and by keeping it simple and resource-friendly.
+Java program using `dd` to make flashing iso and image files easier on the terminal. This program allows anyone to flash iso and image files without having to search for extra GUI tools by keeping it simple and resource-friendly.
 
 # Requirements
 - `Java`: 21 (Download [here](https://www.oracle.com/java/technologies/downloads/#java21)
