@@ -17,7 +17,7 @@ public class Main {
         FilePathAdd.filePath(UserInput);
         BlockSize.blockSize(UserInput);
         OflagHandler.handleOflag(UserInput);
-        
+        Flasher.flasher(UserInput);
 
         
     }

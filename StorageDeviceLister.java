@@ -4,7 +4,11 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class StorageDeviceLister {
-    static void deviceList(Scanner UserInput) {
+
+    public static String device = "";
+    public static String fullPath = "";
+    
+    protected static String deviceList(Scanner UserInput) {
 
         try {
             ProcessBuilder pb = new ProcessBuilder("lsblk");
@@ -22,6 +26,8 @@ public class StorageDeviceLister {
             e.printStackTrace();
         }
         String device = UserInput.nextLine();
-        System.out.println("Using device: " + device);
+        System.out.println("Using device: " + "/dev/" + device);
+        fullPath = "/dev/" + device;
+        return fullPath;
     }
 }

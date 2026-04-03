@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 public class OflagHandler {
-    public static void handleOflag(Scanner UserInput) {
-        System.out.println("Okay, next up please define your oflag. If you have the block-size default, you can choose default here aswell");
-        System.out.println("Available flags: direct (default), dsync, sync, nocache");
+
+    public static String oflagHandleString = "";
+
+    static String handleOflag(Scanner UserInput) {
+        System.out.println("Okay, next up please define your oflag (Default: direct)");
+        System.out.println("Available flags: direct (1), dsync (2), sync (3), nocache (4)");
         String oflagHandleInput = UserInput.nextLine();
 
-        String oflagHandleString;
         switch (oflagHandleInput) {
             case "1":
                 oflagHandleString = "direct";
@@ -24,5 +26,7 @@ public class OflagHandler {
                 oflagHandleString = "direct";
                 break;
         }
+        System.out.println("Using oflag: " + oflagHandleString);
+        return oflagHandleString;
     }
 }
