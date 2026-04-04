@@ -12,10 +12,12 @@ public class Flasher {
         System.out.println("    - To be used oflag: " + OflagHandler.oflagHandleString);
         input = UserInput.nextLine();
         if (YesNo.check(input)) {
-            System.out.println("Flashing...");
+            System.out.println("Starting to flash...");
         } else {
             System.out.println("Canceling...");
             System.exit(0);
         }
+        Dd.dd();
+        System.out.println("Flash completed.");
     }
 }
