@@ -27,7 +27,7 @@ Java program using `dd` to make flashing iso and image files easier on the termi
 - **IMPORTANT**: Since dd needs sudo rights, ensure you have root priviliges.
 
 # Supported OS
-- Linux, MacOS, FreeBSD
+- Linux
 
 # Installation
 1. Clone the repository onto your local device.
