@@ -1,3 +1,4 @@
+package org.cametendo;
 import java.util.Scanner;
 
 public class OflagHandler {

@@ -1,3 +1,4 @@
+package org.cametendo;
 public class YesNo {
     public static boolean check(String input) {
         switch (input) {

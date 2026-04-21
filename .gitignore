@@ -23,8 +23,16 @@
 hs_err_pid*
 replay_pid*
 
-# IDE Stuff
-.vscode/*
+target/
+*.class
+.mtj.tmp/
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# VS Code specific
+.classpath
+.project
+.settings/
 .vscode/
-*.vscode
-.vscode
