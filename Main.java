@@ -13,7 +13,7 @@ public class Main {
             System.out.println("Canceling...");
             System.exit(0);
         }
-        StorageDeviceLister.deviceList(UserInput);
+        StorageDeviceLister.deviceCheck(UserInput);
         FilePathAdd.filePath(UserInput);
         BlockSize.blockSize(UserInput);
         OflagHandler.handleOflag(UserInput);
