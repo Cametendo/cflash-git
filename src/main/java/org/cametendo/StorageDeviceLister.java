@@ -11,10 +11,8 @@ public class StorageDeviceLister {
     public static String fullPath = "";
 
     protected static String deviceCheck(Scanner UserInput) {
-        // 1. lsblk wird genau EINMAL aufgerufen
         deviceList();
 
-        // 2. Die Abfrage-Schleife
         while (true) {
             device = UserInput.nextLine();
             if (device.isBlank()) {
@@ -24,17 +22,24 @@ public class StorageDeviceLister {
             Path path = Path.of("/dev/" + device);
 
             try {
-                // Versuche, den echten Pfad zu finden
                 fullPath = path.toRealPath().toString();
                 
-                // Wenn wir hier ankommen, war der Pfad gültig
                 System.out.println("Using device: " + fullPath);
                 return fullPath; 
 
             } catch (IOException e) {
-                // Fehler-Output, danach springt die Schleife wieder nach oben
                 System.out.println("Failed to access device! Invalid path or no access. Please try again.");
             }
+        }
+    }
+
+    public static String validateAndGetPath(String deviceName) {
+        try {
+            Path path = Path.of("/dev/" + deviceName);
+            return path.toRealPath().toString();
+        } catch (IOException e) {
+            System.out.println("Device not found. Invalid Path or no access.");
+            return null;
         }
     }
 

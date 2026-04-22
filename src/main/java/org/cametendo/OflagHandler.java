@@ -3,31 +3,28 @@ import java.util.Scanner;
 
 public class OflagHandler {
 
-    public static String oflagHandleString = "";
+    public static String oflagHandleString = "direct";
 
-    static String handleOflag(Scanner UserInput) {
-        System.out.println("Okay, next up please define your oflag (Default: direct)");
-        System.out.println("Available flags: direct (1), dsync (2), sync (3), nocache (4)");
-        String oflagHandleInput = UserInput.nextLine();
+    public static String mapOflagHandle(String input) {
+        return switch (input) {
+            case "1" -> "direct";
+            case "2" -> "dsync";
+            case "3" -> "sync";
+            case "4" -> "nocache";
+            case "5" -> "direct";
+            default -> oflagHandleString; 
+        };
+    }
+    
+    static String Oflag(Scanner UserInput) {
+        System.out.println("Choose an Oflag (Default: direct)");
+        System.out.println("direct (1), dsync (2), sync (3), nocache (4)");
+        
+        String input = UserInput.nextLine();
 
-        switch (oflagHandleInput) {
-            case "1":
-                oflagHandleString = "direct";
-                break;
-            case "2":
-                oflagHandleString = "dsync";
-                break;
-            case "3":
-                oflagHandleString = "sync";
-                break;
-            case "4":
-                oflagHandleString = "nocache";
-                break; 
-            default:
-                oflagHandleString = "direct";
-                break;
-        }
-        System.out.println("Using oflag: " + oflagHandleString);
+        oflagHandleString = mapOflagHandle(input);
+        
+        System.out.println("Using Oflag: " + oflagHandleString);
         return oflagHandleString;
     }
 }

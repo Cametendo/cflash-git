@@ -20,6 +20,7 @@ public class Dd {
                 System.out.print(c);
                 System.out.flush();
             }
+            OSDetector.wishWell(FilePathAdd.ImagePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
