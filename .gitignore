@@ -36,5 +36,4 @@ hs_err_pid*
 .project
 .settings/
 .vscode/
-PKGBUILD
 .claude/
