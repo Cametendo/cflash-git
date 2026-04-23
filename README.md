@@ -9,11 +9,74 @@ Small and lightweight image and iso flasher build on `dd`.
 # About
 Java program using `dd` to make flashing iso and image files easier on the terminal. This program allows anyone to flash iso and image files without having to search for extra GUI tools by keeping it simple and resource-friendly.
 
+## Getting Started
+
 # Requirements
 - `Java`: 21 (Download [here](https://www.oracle.com/java/technologies/downloads/#java21))
 - `util-linux`: 2.41
 - `coreutils`: 9.10
 - `maven`: 3.9.15 
+- Operating System: Linux
+### Building and Running Locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/cametendo/cflash-git.git
+   cd cflash-git
+   ```
+
+2. Compile the code:
+
+   ```bash
+   mvn clean package
+   ```
+
+3. Run the application:
+
+   ```bash
+   java -jar target/cflash-<version>.jar (optionally add arguments here, like with dd)
+   ```
+
+### System-wide Installation
+
+To install cflash globally so that it can be run from any terminal:
+
+1. Clone the repository (if not done already):
+
+   ```bash
+   git clone https://github.com/cametendo/cflash-git.git
+   cd cflash-git
+   ```
+
+2. Make the build and install scripts executable:
+
+   ```bash
+   chmod +x build.sh install.sh
+   ```
+
+3. Build the project using the provided build script:
+
+   ```bash
+   ./build.sh
+   ```
+
+4. Install globally (requires root privileges):
+
+   ```bash
+   sudo ./install.sh
+   ```
+
+5. Run cflash from anywhere:
+
+   ```bash
+   cflash
+   ```
+
+**Notes:**
+
+* The `build.sh` script compiles all Java source files and creates an executable `cflash.jar`.
+* The `install.sh` script copies `cflash.jar` to `/usr/local/lib/cflash` and installs a wrapper script in `/usr/local/bin` for easy execution.
 
 # Usage
 - Using the command `cflash` in the terminal, will start the flashing process. You will be asked several question before the flashing begins:
