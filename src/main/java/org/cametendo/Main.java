@@ -23,7 +23,7 @@ public class Main {
 
         } else {
             Greeting.greeting(UserInput);
-            
+
             StorageDeviceLister.deviceCheck(UserInput);
             FilePathAdd.filePath();
             BlockSize.blockSize(UserInput);
