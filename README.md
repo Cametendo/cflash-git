@@ -10,9 +10,10 @@ Small and lightweight image and iso flasher build on `dd`.
 Java program using `dd` to make flashing iso and image files easier on the terminal. This program allows anyone to flash iso and image files without having to search for extra GUI tools by keeping it simple and resource-friendly.
 
 # Requirements
-- `Java`: 21 (Download [here](https://www.oracle.com/java/technologies/downloads/#java21)
+- `Java`: 21 (Download [here](https://www.oracle.com/java/technologies/downloads/#java21))
 - `util-linux`: 2.41
 - `coreutils`: 9.10
+- `maven`: 3.9.15 
 
 # Usage
 - Using the command `cflash` in the terminal, will start the flashing process. You will be asked several question before the flashing begins:
@@ -30,10 +31,10 @@ Java program using `dd` to make flashing iso and image files easier on the termi
 - Linux
 
 # Installation
-1. Clone the repository onto your local device.
+1. Clone the repository onto your device and cd into it.
 2. Run the `build.sh` file to build the program.
 3. Run the `ìnstall.sh`to install the program.
-4. Open a terminal and use the program with `cflash`.
+4. Open a terminal and use the program with `cflash`, optionally add all the arguments you need.
 
 # License and Credits
 **Author**: [Cametendo](https://www.github.com/Cametendo)
