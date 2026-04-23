@@ -77,6 +77,14 @@ To install cflash globally so that it can be run from any terminal:
 
 * The `build.sh` script compiles all Java source files and creates an executable `cflash.jar`.
 * The `install.sh` script copies `cflash.jar` to `/usr/local/lib/cflash` and installs a wrapper script in `/usr/local/bin` for easy execution.
+* If you use Arch Linux:
+   * You can directly install it with `yay` or `paru` via `yay -S cflash` / `paru -S cflash` or
+   * You can clone the repository from the [AUR](https://aur.archlinux.org/packages/cflash) and manually build it:
+      ```bash
+      git clone https://aur.archlinux.org/cflash.git
+      cd cflash
+      makepkg -si
+      ```
 
 # Usage
 - Using the command `cflash` in the terminal, will start the flashing process. You will be asked several question before the flashing begins:
