@@ -7,12 +7,12 @@ public class BlockSize {
 
     public static String mapBlockSize(String input) {
         return switch (input) {
-            case "1" -> "512K";
-            case "2" -> "1M";
-            case "3" -> "2M";
-            case "4" -> "4M";
-            case "5" -> "8M";
-            case "6" -> "16M";
+            case "1", "512K" -> "512K";
+            case "2", "1M" -> "1M";
+            case "3", "2M" -> "2M";
+            case "4", "4M" -> "4M";
+            case "5", "8M" -> "8M";
+            case "6", "16M" -> "16M";
             default -> blockSizeString; 
         };
     }

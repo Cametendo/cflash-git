@@ -7,11 +7,10 @@ public class OflagHandler {
 
     public static String mapOflagHandle(String input) {
         return switch (input) {
-            case "1" -> "direct";
-            case "2" -> "dsync";
-            case "3" -> "sync";
-            case "4" -> "nocache";
-            case "5" -> "direct";
+            case "1", "direct" -> "direct";
+            case "2", "dsync" -> "dsync";
+            case "3", "sync" -> "sync";
+            case "4", "nocache" -> "nocache";
             default -> oflagHandleString; 
         };
     }
