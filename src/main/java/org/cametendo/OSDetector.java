@@ -1,8 +1,27 @@
 package org.cametendo;
 import java.nio.file.Path;
 
+/**
+ * Detects operating system types from image file names and displays completion messages.
+ * 
+ * <p>This class analyzes the filename of disk images to identify the operating system
+ * and displays a personalized completion message with some fun descriptions for various
+ * Linux distributions, BSD variants, and other operating systems.</p>
+ * 
+ * @author Cametendo
+ * @version 1.0
+ */
 public class OSDetector {
 
+    /**
+     * Analyzes an image file path and displays a personalized completion message.
+     * 
+     * <p>Extracts the filename from the provided path and attempts to identify the
+     * operating system based on filename patterns. Displays a fun, personalized message
+     * wishing the user well with their new OS installation.</p>
+     * 
+     * @param imagePath Path to the image file that was flashed
+     */
     public static void wishWell(String imagePath) {
         String fileName = Path.of(imagePath).getFileName().toString().toLowerCase();
         
