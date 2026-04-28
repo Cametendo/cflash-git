@@ -80,7 +80,9 @@ public class OSDetector {
             osName = "Haiku OS";
         } else if (fileName.contains("reactos")) {
             osName = "ReactOS";
-        }
+        } else if (fileName.contains("jgh")) {
+			osName = "JGH OS (Sauerkraut juice)";
+		}
         // Generic Fallbacks
         else if (fileName.contains("linux")) {
             osName = "Linux";
@@ -90,6 +92,6 @@ public class OSDetector {
             osName = "new OS";
         }
 
-        System.out.println("\nFlash complete! Have fun with your " + osName + " installation! 🚀");
+        System.out.println("\nFlash complete! Have fun with your " + osName + " installation!");
     }
 }
