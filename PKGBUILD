@@ -20,9 +20,8 @@ build() {
 package() {
   cd "$srcdir/cflash"
   
-  # for some reason MAKEPKD won't accept my version, using the wildcard for literally anything if may find
-  install -Dm644 target/cflash-1.0.1-jar-with-dependencies.jar \
-    "$pkgdir/usr/share/java/cflash/cflash.jar"
+	install -Dm644 "target/${pkgname}-${pkgver}-jar-with-dependencies.jar" \
+	"$pkgdir/usr/share/java/${pkgname}/${pkgname}.jar"
 
   # Create the executable
   install -d "$pkgdir/usr/bin"
